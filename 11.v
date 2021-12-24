@@ -1,0 +1,1031 @@
+//num of or = 49
+//num of and = 428
+//num of not = 390
+//num of wire = 865
+module c1126 (in0,in1,in2,O0,O1,O2,O3,clk,rst);
+
+input in0,in1,in2,clk,rst;
+
+output O0,O1,O2,O3;
+
+wire in0,in1,in2,N0,N1,N2,N3,N4,N5,N6,N7,N8,
+N9,N10,N11,N12,N13,N14,N15,N16,N17,N18,
+N19,N20,N21,N22,N23,N24,N25,N26,N27,N28,
+N29,N30,N31,N32,N33,N34,N35,N36,N37,N38,
+N39,N40,N41,N42,N43,N44,N45,N46,N47,N48,
+N49,N50,N51,N52,N53,N54,N55,N56,N57,N58,
+N59,N60,N61,N62,N63,N64,N65,N66,N67,N68,
+N69,N70,N71,N72,N73,N74,N75,N76,N77,N78,
+N79,N80,N81,N82,N83,N84,N85,N86,N87,N88,
+N89,N90,N91,N92,N93,N94,N95,N96,N97,N98,
+N99,N100,N101,N102,N103,N104,N105,N106,N107,N108,
+N109,N110,N111,N112,N113,N114,N115,N116,N117,N118,
+N119,N120,N121,N122,N123,N124,N125,N126,N127,N128,
+N129,N130,N131,N132,N133,N134,N135,N136,N137,N138,
+N139,N140,N141,N142,N143,N144,N145,N146,N147,N148,
+N149,N150,N151,N152,N153,N154,N155,N156,N157,N158,
+N159,N160,N161,N162,N163,N164,N165,N166,N167,N168,
+N169,N170,N171,N172,N173,N174,N175,N176,N177,N178,
+N179,N180,N181,N182,N183,N184,N185,N186,N187,N188,
+N189,N190,N191,N192,N193,N194,N195,N196,N197,N198,
+N199,N200,N201,N202,N203,N204,N205,N206,N207,N208,
+N209,N210,N211,N212,N213,N214,N215,N216,N217,N218,
+N219,N220,N221,N222,N223,N224,N225,N226,N227,N228,
+N229,N230,N231,N232,N233,N234,N235,N236,N237,N238,
+N239,N240,N241,N242,N243,N244,N245,N246,N247,N248,
+N249,N250,N251,N252,N253,N254,N255,N256,N257,N258,
+N259,N260,N261,N262,N263,N264,N265,N266,N267,N268,
+N269,N270,N271,N272,N273,N274,N275,N276,N277,N278,
+N279,N280,N281,N282,N283,N284,N285,N286,N287,N288,
+N289,N290,N291,N292,N293,N294,N295,N296,N297,N298,
+N299,N300,N301,N302,N303,N304,N305,N306,N307,N308,
+N309,N310,N311,N312,N313,N314,N315,N316,N317,N318,
+N319,N320,N321,N322,N323,N324,N325,N326,N327,N328,
+N329,N330,N331,N332,N333,N334,N335,N336,N337,N338,
+N339,N340,N341,N342,N343,N344,N345,N346,N347,N348,
+N349,N350,N351,N352,N353,N354,N355,N356,N357,N358,
+N359,N360,N361,N362,N363,N364,N365,N366,N367,N368,
+N369,N370,N371,N372,N373,N374,N375,N376,N377,N378,
+N379,N380,N381,N382,N383,N384,N385,N386,N387,N388,
+N389,N390,N391,N392,N393,N394,N395,N396,N397,N398,
+N399,N400,N401,N402,N403,N404,N405,N406,N407,N408,
+N409,N410,N411,N412,N413,N414,N415,N416,N417,N418,
+N419,N420,N421,N422,N423,N424,N425,N426,N427,N428,
+N429,N430,N431,N432,N433,N434,N435,N436,N437,N438,
+N439,N440,N441,N442,N443,N444,N445,N446,N447,N448,
+N449,N450,N451,N452,N453,N454,N455,N456,N457,N458,
+N459,N460,N461,N462,N463,N464,N465,N466,N467,N468,
+N469,N470,N471,N472,N473,N474,N475,N476,N477,N478,
+N479,N480,N481,N482,N483,N484,N485,N486,N487,N488,
+N489,N490,N491,N492,N493,N494,N495,N496,N497,N498,
+N499,N500,N501,N502,N503,N504,N505,N506,N507,N508,
+N509,N510,N511,N512,N513,N514,N515,N516,N517,N518,
+N519,N520,N521,N522,N523,N524,N525,N526,N527,N528,
+N529,N530,N531,N532,N533,N534,N535,N536,N537,N538,
+N539,N540,N541,N542,N543,N544,N545,N546,N547,N548,
+N549,N550,N551,N552,N553,N554,N555,N556,N557,N558,
+N559,N560,N561,N562,N563,N564,N565,N566,N567,N568,
+N569,N570,N571,N572,N573,N574,N575,N576,N577,N578,
+N579,N580,N581,N582,N583,N584,N585,N586,N587,N588,
+N589,N590,N591,N592,N593,N594,N595,N596,N597,N598,
+N599,N600,N601,N602,N603,N604,N605,N606,N607,N608,
+N609,N610,N611,N612,N613,N614,N615,N616,N617,N618,
+N619,N620,N621,N622,N623,N624,N625,N626,N627,N628,
+N629,N630,N631,N632,N633,N634,N635,N636,N637,N638,
+N639,N640,N641,N642,N643,N644,N645,N646,N647,N648,
+N649,N650,N651,N652,N653,N654,N655,N656,N657,N658,
+N659,N660,N661,N662,N663,N664,N665,N666,N667,N668,
+N669,N670,N671,N672,N673,N674,N675,N676,N677,N678,
+N679,N680,N681,N682,N683,N684,N685,N686,N687,N688,
+N689,N690,N691,N692,N693,N694,N695,N696,N697,N698,
+N699,N700,N701,N702,N703,N704,N705,N706,N707,N708,
+N709,N710,N711,N712,N713,N714,N715,N716,N717,N718,
+N719,N720,N721,N722,N723,N724,N725,N726,N727,N728,
+N729,N730,N731,N732,N733,N734,N735,N736,N737,N738,
+N739,N740,N741,N742,N743,N744,N745,N746,N747,N748,
+N749,N750,N751,N752,N753,N754,N755,N756,N757,N758,
+N759,N760,N761,N762,N763,N764,N765,N766,N767,N768,
+N769,N770,N771,N772,N773,N774,N775,N776,N777,N778,
+N779,N780,N781,N782,N783,N784,N785,N786,N787,N788,
+N789,N790,N791,N792,N793,N794,N795,N796,N797,N798,
+N799,N800,N801,N802,N803,N804,N805,N806,N807,N808,
+N809,N810,N811,N812,N813,N814,N815,N816,N817,N818,
+N819,N820,N821,N822,N823,N824,N825,N826,N827,N828,
+N829,N830,N831,N832,N833,N834,N835,N836,N837,N838,
+N839,N840,N841,N842,N843,N844,N845,N846,N847,N848,
+N849,N850,N851,N852,N853,N854,N855,N856,N857,N858,
+N859,N860,N861,N862,N863,clk,rst;
+
+reg R0,R1,R2,R3,R4,R5,R6,O0,O1,O2,O3;
+
+always@(posedge clk or negedge rst)
+ if(!rst)
+   R0 <= N0;
+   else
+   R0= 1'b0;
+
+always@(posedge clk or negedge rst)
+ if(!rst)
+   R1 <= N50;
+   else
+   R1= 1'b0;
+
+always@(posedge clk or negedge rst)
+ if(!rst)
+   R2 <= N85;
+   else
+   R2= 1'b0;
+
+always@(posedge clk or negedge rst)
+ if(!rst)
+   R3 <= N313;
+   else
+   R3= 1'b0;
+
+always@(posedge clk or negedge rst)
+ if(!rst)
+   R4 <= N348;
+   else
+   R4= 1'b0;
+
+always@(posedge clk or negedge rst)
+ if(!rst)
+   R5 <= N398;
+   else
+   R5= 1'b0;
+
+always@(posedge clk or negedge rst)
+ if(!rst)
+   R6 <= N451;
+   else
+   R6= 1'b0;
+
+always@(posedge clk or negedge rst)
+  if(!rst)
+   O0 <= N504;
+  else
+       O0=1'b0;
+always@(posedge clk or negedge rst)
+  if(!rst)
+   O1 <= N594;
+  else
+       O1=1'b0;
+always@(posedge clk or negedge rst)
+  if(!rst)
+   O2 <= N684;
+  else
+       O2=1'b0;
+always@(posedge clk or negedge rst)
+  if(!rst)
+   O3 <= N774;
+  else
+       O3=1'b0;
+
+and and0(N2,N3,N4);
+and and9(N18,N19,N20);
+and and18(N34,N35,N36);
+and and1(N3,N5,N6);
+and and2(N4,N7,N8);
+and and10(N19,N21,N22);
+and and11(N20,N23,N24);
+and and19(N35,N37,N38);
+and and20(N36,N39,N40);
+and and3(N5,N9,N10);
+and and4(N6,in0,in1);
+and and5(N7,N11,N12);
+and and6(N8,N13,N14);
+and and12(N21,N25,N26);
+and and13(N22,in0,in1);
+and and14(N23,N27,R0);
+and and15(N24,N28,N29);
+and and21(N37,N41,N42);
+and and22(N38,in0,in1);
+and and23(N39,N43,N44);
+and and24(N40,N45,N46);
+and and7(N9,N15,N16);
+and and8(N10,R5,N17);
+and and16(N25,N30,N31);
+and and17(N26,N32,N33);
+and and25(N41,R3,N47);
+and and26(N42,N48,N49);
+and and27(N51,N52,N53);
+and and36(N68,N69,N70);
+and and28(N52,N54,N55);
+and and29(N53,N56,N57);
+and and37(N69,N71,N72);
+and and38(N70,N73,N74);
+and and30(N54,N58,N59);
+and and31(N55,N60,in1);
+and and32(N56,N61,N62);
+and and33(N57,N63,N64);
+and and39(N71,N75,N76);
+and and40(N72,N77,in1);
+and and41(N73,N78,N79);
+and and42(N74,R1,N80);
+and and34(N58,N65,R4);
+and and35(N59,N66,N67);
+and and43(N75,N81,N82);
+and and44(N76,N83,N84);
+and and45(N99,N100,N101);
+and and53(N115,N116,N117);
+and and61(N131,N132,N133);
+and and69(N147,N148,N149);
+and and77(N163,N164,N165);
+and and85(N177,N178,N179);
+and and93(N191,N192,N193);
+and and101(N205,N206,N207);
+and and109(N219,N220,N221);
+and and117(N233,N234,N235);
+and and125(N247,N248,N249);
+and and132(N261,N262,N263);
+and and139(N274,N275,N276);
+and and146(N287,N288,N289);
+and and153(N300,N301,N302);
+and and46(N100,N102,N103);
+and and47(N101,N104,N105);
+and and54(N116,N118,N119);
+and and55(N117,N120,N121);
+and and62(N132,N134,N135);
+and and63(N133,N136,N137);
+and and70(N148,N150,N151);
+and and71(N149,N152,N153);
+and and78(N164,N166,N167);
+and and79(N165,N168,N169);
+and and86(N178,N180,N181);
+and and87(N179,N182,N183);
+and and94(N192,N194,N195);
+and and95(N193,N196,N197);
+and and102(N206,N208,N209);
+and and103(N207,N210,N211);
+and and110(N220,N222,N223);
+and and111(N221,N224,N225);
+and and118(N234,N236,N237);
+and and119(N235,N238,N239);
+and and126(N248,N250,N251);
+and and127(N249,N252,N253);
+and and133(N262,N264,N265);
+and and134(N263,N266,N267);
+and and140(N275,N277,N278);
+and and141(N276,N279,N280);
+and and147(N288,N290,N291);
+and and148(N289,N292,N293);
+and and154(N301,N303,N304);
+and and155(N302,N305,N306);
+and and48(N102,N106,N107);
+and and49(N103,N108,N109);
+and and50(N104,N110,R2);
+and and51(N105,N111,N112);
+and and56(N118,N122,N123);
+and and57(N119,N124,N125);
+and and58(N120,R1,N126);
+and and59(N121,N127,N128);
+and and64(N134,N138,N139);
+and and65(N135,N140,N141);
+and and66(N136,N142,N143);
+and and67(N137,N144,N145);
+and and72(N150,N154,N155);
+and and73(N151,N156,N157);
+and and74(N152,N158,N159);
+and and75(N153,R3,N160);
+and and80(N166,N170,in1);
+and and81(N167,in2,N171);
+and and82(N168,N172,R2);
+and and83(N169,N173,N174);
+and and88(N180,N184,in0);
+and and89(N181,in2,N185);
+and and90(N182,N186,R2);
+and and91(N183,N187,N188);
+and and96(N194,N198,in1);
+and and97(N195,in2,N199);
+and and98(N196,R1,N200);
+and and99(N197,N201,N202);
+and and104(N208,N212,in0);
+and and105(N209,in2,N213);
+and and106(N210,R1,N214);
+and and107(N211,N215,N216);
+and and112(N222,N226,in1);
+and and113(N223,in2,N227);
+and and114(N224,N228,N229);
+and and115(N225,R3,N230);
+and and120(N236,N240,in0);
+and and121(N237,in2,N241);
+and and122(N238,N242,N243);
+and and123(N239,R3,N244);
+and and128(N250,N254,N255);
+and and129(N251,N256,N257);
+and and130(N252,N258,N259);
+and and131(N253,N260,R6);
+and and135(N264,in2,N268);
+and and136(N265,N269,N270);
+and and137(N266,N271,R4);
+and and138(N267,N272,N273);
+and and142(N277,in2,N281);
+and and143(N278,N282,N283);
+and and144(N279,N284,N285);
+and and145(N280,R5,N286);
+and and149(N290,in2,R0);
+and and150(N291,N294,N295);
+and and151(N292,N296,N297);
+and and152(N293,N298,N299);
+and and156(N303,in2,N307);
+and and157(N304,N308,N309);
+and and158(N305,N310,N311);
+and and159(N306,N312,R6);
+and and52(N106,N113,N114);
+and and60(N122,N129,N130);
+and and68(N138,R5,N146);
+and and76(N154,N161,N162);
+and and84(N170,N175,N176);
+and and92(N184,N189,N190);
+and and100(N198,N203,N204);
+and and108(N212,N217,N218);
+and and116(N226,N231,N232);
+and and124(N240,N245,N246);
+and and160(N314,N315,N316);
+and and169(N331,N332,N333);
+and and161(N315,N317,N318);
+and and162(N316,N319,N320);
+and and170(N332,N334,N335);
+and and171(N333,N336,N337);
+and and163(N317,N321,N322);
+and and164(N318,in0,N323);
+and and165(N319,N324,R0);
+and and166(N320,N325,N326);
+and and172(N334,N338,N339);
+and and173(N335,in0,N340);
+and and174(N336,N341,N342);
+and and175(N337,N343,N344);
+and and167(N321,N327,N328);
+and and168(N322,N329,N330);
+and and176(N338,R3,N345);
+and and177(N339,N346,N347);
+and and178(N350,N351,N352);
+and and187(N366,N367,N368);
+and and196(N382,N383,N384);
+and and179(N351,N353,N354);
+and and180(N352,N355,N356);
+and and188(N367,N369,N370);
+and and189(N368,N371,N372);
+and and197(N383,N385,N386);
+and and198(N384,N387,N388);
+and and181(N353,N357,N358);
+and and182(N354,in0,in1);
+and and183(N355,N359,N360);
+and and184(N356,N361,N362);
+and and190(N369,N373,N374);
+and and191(N370,in0,in1);
+and and192(N371,N375,N376);
+and and193(N372,N377,N378);
+and and199(N385,N389,N390);
+and and200(N386,in0,in1);
+and and201(N387,N391,N392);
+and and202(N388,R1,N393);
+and and185(N357,N363,N364);
+and and186(N358,N365,R6);
+and and194(N373,N379,R4);
+and and195(N374,N380,N381);
+and and203(N389,N394,N395);
+and and204(N390,N396,N397);
+and and205(N400,N401,N402);
+and and214(N417,N418,N419);
+and and223(N434,N435,N436);
+and and206(N401,N403,N404);
+and and207(N402,N405,N406);
+and and215(N418,N420,N421);
+and and216(N419,N422,N423);
+and and224(N435,N437,N438);
+and and225(N436,N439,N440);
+and and208(N403,N407,N408);
+and and209(N404,N409,in1);
+and and210(N405,N410,N411);
+and and211(N406,N412,R2);
+and and217(N420,N424,N425);
+and and218(N421,N426,in1);
+and and219(N422,N427,N428);
+and and220(N423,N429,N430);
+and and226(N437,N441,N442);
+and and227(N438,N443,in1);
+and and228(N439,N444,R0);
+and and229(N440,N445,N446);
+and and212(N407,N413,N414);
+and and213(N408,N415,N416);
+and and221(N424,N431,N432);
+and and222(N425,R5,N433);
+and and230(N441,N447,N448);
+and and231(N442,N449,N450);
+and and232(N453,N454,N455);
+and and241(N470,N471,N472);
+and and250(N487,N488,N489);
+and and233(N454,N456,N457);
+and and234(N455,N458,N459);
+and and242(N471,N473,N474);
+and and243(N472,N475,N476);
+and and251(N488,N490,N491);
+and and252(N489,N492,N493);
+and and235(N456,N460,N461);
+and and236(N457,in0,N462);
+and and237(N458,N463,N464);
+and and238(N459,N465,R2);
+and and244(N473,N477,N478);
+and and245(N474,in0,N479);
+and and246(N475,N480,N481);
+and and247(N476,N482,N483);
+and and253(N490,N494,N495);
+and and254(N491,in0,N496);
+and and255(N492,N497,N498);
+and and256(N493,N499,N500);
+and and239(N460,N466,N467);
+and and240(N461,N468,N469);
+and and248(N477,N484,N485);
+and and249(N478,N486,R6);
+and and257(N494,N501,R4);
+and and258(N495,N502,N503);
+and and259(N510,N511,N512);
+and and265(N522,N523,N524);
+and and271(N534,N535,N536);
+and and277(N546,N547,N548);
+and and283(N558,N559,N560);
+and and289(N570,N571,N572);
+and and295(N582,N583,N584);
+and and260(N511,N513,N514);
+and and261(N512,N515,N516);
+and and266(N523,N525,N526);
+and and267(N524,N527,N528);
+and and272(N535,N537,N538);
+and and273(N536,N539,N540);
+and and278(N547,N549,N550);
+and and279(N548,N551,N552);
+and and284(N559,N561,N562);
+and and285(N560,N563,N564);
+and and290(N571,N573,N574);
+and and291(N572,N575,R0);
+and and296(N583,N585,N586);
+and and297(N584,N587,N588);
+and and262(N513,N517,R2);
+and and263(N514,N518,N519);
+and and264(N515,N520,N521);
+and and268(N525,N529,N530);
+and and269(N526,N531,N532);
+and and270(N527,N533,R6);
+and and274(N537,N541,N542);
+and and275(N538,N543,R4);
+and and276(N539,N544,N545);
+and and280(N549,R1,N553);
+and and281(N550,N554,N555);
+and and282(N551,N556,N557);
+and and286(N561,N565,N566);
+and and287(N562,N567,N568);
+and and288(N563,R5,N569);
+and and292(N573,N576,N577);
+and and293(N574,N578,N579);
+and and294(N575,N580,N581);
+and and298(N585,N589,N590);
+and and299(N586,R3,N591);
+and and300(N587,N592,N593);
+and and301(N600,N601,N602);
+and and307(N612,N613,N614);
+and and313(N624,N625,N626);
+and and319(N636,N637,N638);
+and and325(N648,N649,N650);
+and and331(N660,N661,N662);
+and and337(N672,N673,N674);
+and and302(N601,N603,N604);
+and and303(N602,N605,N606);
+and and308(N613,N615,N616);
+and and309(N614,N617,N618);
+and and314(N625,N627,N628);
+and and315(N626,N629,N630);
+and and320(N637,N639,N640);
+and and321(N638,N641,N642);
+and and326(N649,N651,N652);
+and and327(N650,N653,N654);
+and and332(N661,N663,N664);
+and and333(N662,N665,R0);
+and and338(N673,N675,N676);
+and and339(N674,N677,N678);
+and and304(N603,N607,R2);
+and and305(N604,N608,N609);
+and and306(N605,N610,N611);
+and and310(N615,N619,N620);
+and and311(N616,N621,N622);
+and and312(N617,N623,R6);
+and and316(N627,N631,N632);
+and and317(N628,N633,R4);
+and and318(N629,N634,N635);
+and and322(N639,R1,N643);
+and and323(N640,N644,N645);
+and and324(N641,N646,N647);
+and and328(N651,N655,N656);
+and and329(N652,N657,N658);
+and and330(N653,R5,N659);
+and and334(N663,N666,N667);
+and and335(N664,N668,N669);
+and and336(N665,N670,N671);
+and and340(N675,N679,N680);
+and and341(N676,R3,N681);
+and and342(N677,N682,N683);
+and and343(N690,N691,N692);
+and and349(N702,N703,N704);
+and and355(N714,N715,N716);
+and and361(N726,N727,N728);
+and and367(N738,N739,N740);
+and and373(N750,N751,N752);
+and and379(N762,N763,N764);
+and and344(N691,N693,N694);
+and and345(N692,N695,N696);
+and and350(N703,N705,N706);
+and and351(N704,N707,N708);
+and and356(N715,N717,N718);
+and and357(N716,N719,N720);
+and and362(N727,N729,N730);
+and and363(N728,N731,N732);
+and and368(N739,N741,N742);
+and and369(N740,N743,N744);
+and and374(N751,N753,N754);
+and and375(N752,N755,R0);
+and and380(N763,N765,N766);
+and and381(N764,N767,N768);
+and and346(N693,N697,R2);
+and and347(N694,N698,N699);
+and and348(N695,N700,N701);
+and and352(N705,N709,N710);
+and and353(N706,N711,N712);
+and and354(N707,N713,R6);
+and and358(N717,N721,N722);
+and and359(N718,N723,R4);
+and and360(N719,N724,N725);
+and and364(N729,R1,N733);
+and and365(N730,N734,N735);
+and and366(N731,N736,N737);
+and and370(N741,N745,N746);
+and and371(N742,N747,N748);
+and and372(N743,R5,N749);
+and and376(N753,N756,N757);
+and and377(N754,N758,N759);
+and and378(N755,N760,N761);
+and and382(N765,N769,N770);
+and and383(N766,R3,N771);
+and and384(N767,N772,N773);
+and and385(N780,N781,N782);
+and and391(N792,N793,N794);
+and and397(N804,N805,N806);
+and and403(N816,N817,N818);
+and and409(N828,N829,N830);
+and and415(N840,N841,N842);
+and and421(N852,N853,N854);
+and and386(N781,N783,N784);
+and and387(N782,N785,N786);
+and and392(N793,N795,N796);
+and and393(N794,N797,N798);
+and and398(N805,N807,N808);
+and and399(N806,N809,N810);
+and and404(N817,N819,N820);
+and and405(N818,N821,N822);
+and and410(N829,N831,N832);
+and and411(N830,N833,N834);
+and and416(N841,N843,N844);
+and and417(N842,N845,R0);
+and and422(N853,N855,N856);
+and and423(N854,N857,N858);
+and and388(N783,N787,R2);
+and and389(N784,N788,N789);
+and and390(N785,N790,N791);
+and and394(N795,N799,N800);
+and and395(N796,N801,N802);
+and and396(N797,N803,R6);
+and and400(N807,N811,N812);
+and and401(N808,N813,R4);
+and and402(N809,N814,N815);
+and and406(N819,R1,N823);
+and and407(N820,N824,N825);
+and and408(N821,N826,N827);
+and and412(N831,N835,N836);
+and and413(N832,N837,N838);
+and and414(N833,R5,N839);
+and and418(N843,N846,N847);
+and and419(N844,N848,N849);
+and and420(N845,N850,N851);
+and and424(N855,N859,N860);
+and and425(N856,R3,N861);
+and and426(N857,N862,N863);
+
+or or0(N0,N1,N2);
+or or1(N1,N18,N34);
+or or2(N50,N51,N68);
+or or3(N85,N86,N87);
+or or4(N86,N88,N89);
+or or5(N87,N90,N91);
+or or6(N88,N92,N93);
+or or7(N89,N94,N95);
+or or8(N90,N96,N97);
+or or9(N91,N98,N99);
+or or10(N92,N115,N131);
+or or11(N93,N147,N163);
+or or12(N94,N177,N191);
+or or13(N95,N205,N219);
+or or14(N96,N233,N247);
+or or15(N97,N261,N274);
+or or16(N98,N287,N300);
+or or17(N313,N314,N331);
+or or18(N348,N349,N350);
+or or19(N349,N366,N382);
+or or20(N398,N399,N400);
+or or21(N399,N417,N434);
+or or22(N451,N452,N453);
+or or23(N452,N470,N487);
+or or24(N504,N505,N506);
+or or25(N505,N507,N508);
+or or26(N506,N509,N510);
+or or27(N507,N522,N534);
+or or28(N508,N546,N558);
+or or29(N509,N570,N582);
+or or30(N594,N595,N596);
+or or31(N595,N597,N598);
+or or32(N596,N599,N600);
+or or33(N597,N612,N624);
+or or34(N598,N636,N648);
+or or35(N599,N660,N672);
+or or36(N684,N685,N686);
+or or37(N685,N687,N688);
+or or38(N686,N689,N690);
+or or39(N687,N702,N714);
+or or40(N688,N726,N738);
+or or41(N689,N750,N762);
+or or42(N774,N775,N776);
+or or43(N775,N777,N778);
+or or44(N776,N779,N780);
+or or45(N777,N792,N804);
+or or46(N778,N816,N828);
+or or47(N779,N840,N852);
+
+not not0(N11,in2);
+not not1(N12,R0);
+not not2(N13,R1);
+not not3(N14,R2);
+not not4(N27,in2);
+not not5(N28,R1);
+not not6(N29,R2);
+not not7(N43,in2);
+not not8(N44,R0);
+not not9(N45,R1);
+not not10(N46,R2);
+not not11(N15,R3);
+not not12(N16,R4);
+not not13(N17,R6);
+not not14(N30,R3);
+not not15(N31,R4);
+not not16(N32,R5);
+not not17(N33,R6);
+not not18(N47,R4);
+not not19(N48,R5);
+not not20(N49,R6);
+not not21(N60,in0);
+not not22(N61,in2);
+not not23(N62,R0);
+not not24(N63,R1);
+not not25(N64,R2);
+not not26(N77,in0);
+not not27(N78,in2);
+not not28(N79,R0);
+not not29(N80,R2);
+not not30(N65,R3);
+not not31(N66,R5);
+not not32(N67,R6);
+not not33(N81,R3);
+not not34(N82,R4);
+not not35(N83,R5);
+not not36(N84,R6);
+not not37(N107,in0);
+not not38(N108,in1);
+not not39(N109,R0);
+not not40(N110,R1);
+not not41(N111,R3);
+not not42(N112,R4);
+not not43(N123,in0);
+not not44(N124,in1);
+not not45(N125,R0);
+not not46(N126,R2);
+not not47(N127,R3);
+not not48(N128,R4);
+not not49(N139,in1);
+not not50(N140,in2);
+not not51(N141,R0);
+not not52(N142,R1);
+not not53(N143,R2);
+not not54(N144,R3);
+not not55(N145,R4);
+not not56(N155,in0);
+not not57(N156,in1);
+not not58(N157,R0);
+not not59(N158,R1);
+not not60(N159,R2);
+not not61(N160,R4);
+not not62(N171,R0);
+not not63(N172,R1);
+not not64(N173,R3);
+not not65(N174,R4);
+not not66(N185,R0);
+not not67(N186,R1);
+not not68(N187,R3);
+not not69(N188,R4);
+not not70(N199,R0);
+not not71(N200,R2);
+not not72(N201,R3);
+not not73(N202,R4);
+not not74(N213,R0);
+not not75(N214,R2);
+not not76(N215,R3);
+not not77(N216,R4);
+not not78(N227,R0);
+not not79(N228,R1);
+not not80(N229,R2);
+not not81(N230,R4);
+not not82(N241,R0);
+not not83(N242,R1);
+not not84(N243,R2);
+not not85(N244,R4);
+not not86(N254,in0);
+not not87(N255,R0);
+not not88(N256,R1);
+not not89(N257,R2);
+not not90(N258,R3);
+not not91(N259,R4);
+not not92(N260,R5);
+not not93(N268,R0);
+not not94(N269,R1);
+not not95(N270,R2);
+not not96(N271,R3);
+not not97(N272,R5);
+not not98(N273,R6);
+not not99(N281,R0);
+not not100(N282,R1);
+not not101(N283,R2);
+not not102(N284,R3);
+not not103(N285,R4);
+not not104(N286,R6);
+not not105(N294,R1);
+not not106(N295,R2);
+not not107(N296,R3);
+not not108(N297,R4);
+not not109(N298,R5);
+not not110(N299,R6);
+not not111(N307,R0);
+not not112(N308,R1);
+not not113(N309,R2);
+not not114(N310,R3);
+not not115(N311,R4);
+not not116(N312,R5);
+not not117(N113,R5);
+not not118(N114,R6);
+not not119(N129,R5);
+not not120(N130,R6);
+not not121(N146,R6);
+not not122(N161,R5);
+not not123(N162,R6);
+not not124(N175,R5);
+not not125(N176,R6);
+not not126(N189,R5);
+not not127(N190,R6);
+not not128(N203,R5);
+not not129(N204,R6);
+not not130(N217,R5);
+not not131(N218,R6);
+not not132(N231,R5);
+not not133(N232,R6);
+not not134(N245,R5);
+not not135(N246,R6);
+not not136(N323,in1);
+not not137(N324,in2);
+not not138(N325,R1);
+not not139(N326,R2);
+not not140(N340,in1);
+not not141(N341,in2);
+not not142(N342,R0);
+not not143(N343,R1);
+not not144(N344,R2);
+not not145(N327,R3);
+not not146(N328,R4);
+not not147(N329,R5);
+not not148(N330,R6);
+not not149(N345,R4);
+not not150(N346,R5);
+not not151(N347,R6);
+not not152(N359,in2);
+not not153(N360,R0);
+not not154(N361,R1);
+not not155(N362,R2);
+not not156(N375,in2);
+not not157(N376,R0);
+not not158(N377,R1);
+not not159(N378,R2);
+not not160(N391,in2);
+not not161(N392,R0);
+not not162(N393,R2);
+not not163(N363,R3);
+not not164(N364,R4);
+not not165(N365,R5);
+not not166(N379,R3);
+not not167(N380,R5);
+not not168(N381,R6);
+not not169(N394,R3);
+not not170(N395,R4);
+not not171(N396,R5);
+not not172(N397,R6);
+not not173(N409,in0);
+not not174(N410,in2);
+not not175(N411,R0);
+not not176(N412,R1);
+not not177(N426,in0);
+not not178(N427,in2);
+not not179(N428,R0);
+not not180(N429,R1);
+not not181(N430,R2);
+not not182(N443,in0);
+not not183(N444,in2);
+not not184(N445,R1);
+not not185(N446,R2);
+not not186(N413,R3);
+not not187(N414,R4);
+not not188(N415,R5);
+not not189(N416,R6);
+not not190(N431,R3);
+not not191(N432,R4);
+not not192(N433,R6);
+not not193(N447,R3);
+not not194(N448,R4);
+not not195(N449,R5);
+not not196(N450,R6);
+not not197(N462,in1);
+not not198(N463,in2);
+not not199(N464,R0);
+not not200(N465,R1);
+not not201(N479,in1);
+not not202(N480,in2);
+not not203(N481,R0);
+not not204(N482,R1);
+not not205(N483,R2);
+not not206(N496,in1);
+not not207(N497,in2);
+not not208(N498,R0);
+not not209(N499,R1);
+not not210(N500,R2);
+not not211(N466,R3);
+not not212(N467,R4);
+not not213(N468,R5);
+not not214(N469,R6);
+not not215(N484,R3);
+not not216(N485,R4);
+not not217(N486,R5);
+not not218(N501,R3);
+not not219(N502,R5);
+not not220(N503,R6);
+not not221(N516,R0);
+not not222(N528,R0);
+not not223(N540,R0);
+not not224(N552,R0);
+not not225(N564,R0);
+not not226(N588,R0);
+not not227(N517,R1);
+not not228(N518,R3);
+not not229(N519,R4);
+not not230(N520,R5);
+not not231(N521,R6);
+not not232(N529,R1);
+not not233(N530,R2);
+not not234(N531,R3);
+not not235(N532,R4);
+not not236(N533,R5);
+not not237(N541,R1);
+not not238(N542,R2);
+not not239(N543,R3);
+not not240(N544,R5);
+not not241(N545,R6);
+not not242(N553,R2);
+not not243(N554,R3);
+not not244(N555,R4);
+not not245(N556,R5);
+not not246(N557,R6);
+not not247(N565,R1);
+not not248(N566,R2);
+not not249(N567,R3);
+not not250(N568,R4);
+not not251(N569,R6);
+not not252(N576,R1);
+not not253(N577,R2);
+not not254(N578,R3);
+not not255(N579,R4);
+not not256(N580,R5);
+not not257(N581,R6);
+not not258(N589,R1);
+not not259(N590,R2);
+not not260(N591,R4);
+not not261(N592,R5);
+not not262(N593,R6);
+not not263(N606,R0);
+not not264(N618,R0);
+not not265(N630,R0);
+not not266(N642,R0);
+not not267(N654,R0);
+not not268(N678,R0);
+not not269(N607,R1);
+not not270(N608,R3);
+not not271(N609,R4);
+not not272(N610,R5);
+not not273(N611,R6);
+not not274(N619,R1);
+not not275(N620,R2);
+not not276(N621,R3);
+not not277(N622,R4);
+not not278(N623,R5);
+not not279(N631,R1);
+not not280(N632,R2);
+not not281(N633,R3);
+not not282(N634,R5);
+not not283(N635,R6);
+not not284(N643,R2);
+not not285(N644,R3);
+not not286(N645,R4);
+not not287(N646,R5);
+not not288(N647,R6);
+not not289(N655,R1);
+not not290(N656,R2);
+not not291(N657,R3);
+not not292(N658,R4);
+not not293(N659,R6);
+not not294(N666,R1);
+not not295(N667,R2);
+not not296(N668,R3);
+not not297(N669,R4);
+not not298(N670,R5);
+not not299(N671,R6);
+not not300(N679,R1);
+not not301(N680,R2);
+not not302(N681,R4);
+not not303(N682,R5);
+not not304(N683,R6);
+not not305(N696,R0);
+not not306(N708,R0);
+not not307(N720,R0);
+not not308(N732,R0);
+not not309(N744,R0);
+not not310(N768,R0);
+not not311(N697,R1);
+not not312(N698,R3);
+not not313(N699,R4);
+not not314(N700,R5);
+not not315(N701,R6);
+not not316(N709,R1);
+not not317(N710,R2);
+not not318(N711,R3);
+not not319(N712,R4);
+not not320(N713,R5);
+not not321(N721,R1);
+not not322(N722,R2);
+not not323(N723,R3);
+not not324(N724,R5);
+not not325(N725,R6);
+not not326(N733,R2);
+not not327(N734,R3);
+not not328(N735,R4);
+not not329(N736,R5);
+not not330(N737,R6);
+not not331(N745,R1);
+not not332(N746,R2);
+not not333(N747,R3);
+not not334(N748,R4);
+not not335(N749,R6);
+not not336(N756,R1);
+not not337(N757,R2);
+not not338(N758,R3);
+not not339(N759,R4);
+not not340(N760,R5);
+not not341(N761,R6);
+not not342(N769,R1);
+not not343(N770,R2);
+not not344(N771,R4);
+not not345(N772,R5);
+not not346(N773,R6);
+not not347(N786,R0);
+not not348(N798,R0);
+not not349(N810,R0);
+not not350(N822,R0);
+not not351(N834,R0);
+not not352(N858,R0);
+not not353(N787,R1);
+not not354(N788,R3);
+not not355(N789,R4);
+not not356(N790,R5);
+not not357(N791,R6);
+not not358(N799,R1);
+not not359(N800,R2);
+not not360(N801,R3);
+not not361(N802,R4);
+not not362(N803,R5);
+not not363(N811,R1);
+not not364(N812,R2);
+not not365(N813,R3);
+not not366(N814,R5);
+not not367(N815,R6);
+not not368(N823,R2);
+not not369(N824,R3);
+not not370(N825,R4);
+not not371(N826,R5);
+not not372(N827,R6);
+not not373(N835,R1);
+not not374(N836,R2);
+not not375(N837,R3);
+not not376(N838,R4);
+not not377(N839,R6);
+not not378(N846,R1);
+not not379(N847,R2);
+not not380(N848,R3);
+not not381(N849,R4);
+not not382(N850,R5);
+not not383(N851,R6);
+not not384(N859,R1);
+not not385(N860,R2);
+not not386(N861,R4);
+not not387(N862,R5);
+not not388(N863,R6);
+
+endmodule
